@@ -22,7 +22,7 @@ def predict():
 
     input = pd.DataFrame([[job_title, company, location]],columns=["Job Title","Company Name","Location"])
     prediction = pipe.predict(input)[0]
-    return str(prediction)
+    return str(prediction)+'K /year'
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
